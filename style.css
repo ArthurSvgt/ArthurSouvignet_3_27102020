@@ -1,3 +1,13 @@
+body
+{
+    margin: auto;
+}
+
+.restaurants
+{
+    margin-left: 25px;
+}
+
 footer
 {
     background-color: #353535;
