@@ -1,11 +1,74 @@
+@media all and (max-width: 1024px)
+{
+
+    @font-face {
+        font-family: 'robotoregular';
+        src: url('webfonts/roboto_regular_macroman/Roboto-Regular-webfont.eot');
+        src: url('webfonts/roboto_regular_macroman/Roboto-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+             url('webfonts/roboto_regular_macroman/Roboto-Regular-webfont.woff2') format('woff2'),
+             url('webfonts/roboto_regular_macroman/Roboto-Regular-webfont.woff') format('woff'),
+             url('webfonts/roboto_regular_macroman/Roboto-Regular-webfont.ttf') format('truetype'),
+             url('webfonts/roboto_regular_macroman/Roboto-Regular-webfont.svg#robotoregular') format('svg');
+        font-weight: normal;
+        font-style: normal;
+    
+    } 
+
 body
 {
     margin: auto;
+    font-family: "robotoregular";
+}
+
+header
+{
+   text-align: center;
+}
+
+.topsection 
+{
+ display: flex;
+ flex-direction: column;
+ text-align: center;
+ 
+}
+
+.localisation
+
+{
+   background-color: #EAEAEA;
+   height: 50px;
+}
+
+.toptextes
+{
+    background-color: #F6F6F6;
+}
+
+.topsection button
+{  
+background-color:#FF79DA;
+color: white;
+border-radius: 10px;
+padding: 10px;
+border: none;
+box-shadow:  0px 8px 10px 1px grey;
+margin-bottom: 30px;
+}
+
+.fonctionnement
+{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
 }
 
 .restaurants
 {
     margin-left: 25px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
 }
 
 footer
@@ -46,4 +109,20 @@ footer
 {
   font-size: 90%;
   margin-right: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
