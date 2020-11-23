@@ -1,6 +1,3 @@
-@media all and (max-width: 1024px)
-{
-
     @font-face {
         font-family: 'robotoregular';
         src: url('webfonts/roboto_regular_macroman/Roboto-Regular-webfont.eot');
@@ -14,105 +11,157 @@
     
     } 
 
-body
-{
-    margin: auto;
-    font-family: "robotoregular";
-}
+    body
+    {
+        margin: auto;
+        font-family: "robotoregular";
+        font-size: 16px;
+    }
 
-header
-{
-   text-align: center;
-}
+    p {
+        font-size: 1rem;
+    }
 
-.topsection 
-{
- display: flex;
- flex-direction: column;
- text-align: center;
- 
-}
+    h1 {
+        font-size: 1.5rem;
+    }
 
-.localisation
+    header
+    {
+        text-align: center;
+    }
 
-{
-   background-color: #EAEAEA;
-   height: 50px;
-}
+    .topsection 
+    {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    
+    }
+    
+    .localisation
 
-.toptextes
-{
-    background-color: #F6F6F6;
-}
+    {
+        background-color: #EAEAEA;
+        height: 50px;
+    }
 
-.topsection button
-{  
-background-color:#FF79DA;
-color: white;
-border-radius: 10px;
-padding: 10px;
-border: none;
-box-shadow:  0px 8px 10px 1px grey;
-margin-bottom: 30px;
-}
+    .toptextes
+    {
+        background-color: #F6F6F6;
+    }
 
-.fonctionnement
-{
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-}
+    .topsection button
+    {  
+        background-color:#FF79DA;
+        color: white;
+        border-radius: 10px;
+        padding: 10px;
+        border: none;
+        margin-bottom: 30px;
+    }
 
-.restaurants
-{
-    margin-left: 25px;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-}
+    .fonctionnement
+    {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
 
-footer
-{
-    background-color: #353535;
-    display: flex;  
-    flex-direction: column;
-}
+    .fonctionnement li
+    {
+        border-radius: 25px 25px 25px 25px;
+        padding-top: 1.5em;
+        padding-bottom: 1.5em;
+        list-style-position: inside;
+    }
 
-#txtfooter
-{
-    margin-top: 30px;
-    margin-left: 30px;
-    margin-bottom: 30px;  
-}
+ ::marker
+    {
+        border-radius: 25px 25px 25px 25px;
+        background-color: #9356DC;
+    }
 
-#imgfooter
-{
-    margin-bottom: 2%;
-    color: white;
-}
+    .liste
+    {
+        margin-top: 1.5em;
+    }
 
-#contactfooter
-{
-    font-size: 25px;
-    display: flex;
-    flex-direction: column;
-}
+    .iconelist
+    {
+        font-size: 1.5em;
+        margin-right: 1em;
+        color: gray;
+    }
+    
 
-#contactfooter p 
-{
-  color: white;
-  margin-top: 1px;
-  margin-bottom: 7px;
-}
+    .restaurants
+    {
+        background-color: #F6F6F6;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
 
-.iconefork
-{
-  font-size: 90%;
-  margin-right: 15px;
-}
+    .contain
+    {
+        object-fit: cover;
+        width: 100%;
+        height: 15em;
+        border-radius: 10px 10px 0px 0px;
+    }
 
+    .boxresto
+    {
+        border-radius:10px 10px 10px 10px;
+        background-color: red;
+        height: 20em;
+    }
 
+    footer
+    {
+        background-color: #353535;
+        display: flex;  
+        flex-direction: column;
+    }
 
+    #txtfooter
+    {
+        margin-top: 30px;
+        margin-left: 30px;
+        margin-bottom: 30px;  
+    }
+
+    #imgfooter
+    {
+        margin-bottom: 2%;
+        color: white;
+    }
+
+    #contactfooter
+    {
+        font-size: 25px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #contactfooter p 
+    {
+         color: white;
+        margin-top: 1px;
+         margin-bottom: 7px;
+    }
+
+    .iconefork
+    {
+        font-size: 90%;
+        margin-right: 15px;
+    }
+
+    .ombre
+    {
+        box-shadow:  0px 5px 20px 1px #808080b8;
+    }
 
 
 
