@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>OhMyFood</title>
+    <title>OhMyFood - Accueil</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="icones/css/all.css">
 </head>
@@ -21,10 +21,10 @@
 
     <section class="topsection">
         <div class="localisation">
-            <p>Paris, Belleville</p>
+            <p><i class="fas fa-map-marker-alt iconemap"></i>Paris, Belleville</p>
         </div>
         <div class="toptextes">
-            <h1>Réserver le menu qui<br> vous convient</h1>
+            <h1><strong>Réservez le menu qui<br> vous convient</strong></h1>
             <p>Découvrez des restaurants d'exception,<br> sélélectionnés par nos soins.</p>
             <div>
                 <button class="ombre">Explorer nos restaurants</button>
@@ -37,9 +37,12 @@
     <section class="fonctionnement">
         <h1>Fonctionnement</h1>
         <ol>
-            <li class="ombre"><i class="fas fa-mobile-alt iconelist"></i><span>1</span>Choisissez un restaurant</li>
-            <li class="ombre"><i class="fas fa-list-ul iconelist"></i><span>2</span>Composez votre menu</li>
-            <li class="ombre"><i class="fas fa-store iconelist"></i><span>3</span>Dégustez au restaurant</li>
+            <li class="ombre"><i class="fas fa-mobile-alt iconelist"></i><span class="numeros">1</span>Choisissez un
+                restaurant</li>
+            <li class="ombre"><i class="fas fa-list-ul iconelist"></i><span class="numeros">2</span>Composez votre menu
+            </li>
+            <li class="ombre"><i class="fas fa-store iconelist"></i><span class="numeros">3</span>Dégustez au restaurant
+            </li>
         </ol>
     </section>
 
@@ -47,32 +50,38 @@
 
     <section class="restaurants">
         <h1>Restaurants</h1>
-        <figure>
+        <figure class="ombre2">
+            <div class="nouveau">Nouveau</div>
             <img src="Maquette/images/restaurants/resto1.jpg" class="contain">
             <figcaption>
                 <h2>La palette du goût</h2>
-                <p class="selected">Ménilmontant</p>
+                <p class="selected"></i>Ménilmontant</p>
+                <p><i class="far fa-heart iconeheart"></i></p>
             </figcaption>
         </figure>
-        <figure>
-            <img src="Maquette/images/restaurants/resto2.jpg" class="contain" >
+        <figure class="ombre2">
+            <div class="nouveau">Nouveau</div>
+            <img src="Maquette/images/restaurants/resto2.jpg" class="contain">
             <figcaption>
                 <h2>La note enchantée</h2>
-                <p>Charonne</p>
+                <p class="selected">Charonne</p>
+                <p><i class="far fa-heart iconeheart"></i></p>
             </figcaption>
         </figure>
-        <figure>
-            <img src="Maquette/images/restaurants/resto3.jpg" class="contain" >
+        <figure class="ombre2">
+            <img src="Maquette/images/restaurants/resto3.jpg" class="contain">
             <figcaption>
                 <h2>A la francaise</h2>
-                <p>Cité Rouge</p>
+                <p class="selected">Cité Rouge</p>
+                <p><i class="far fa-heart iconeheart"></i></p>
             </figcaption>
         </figure>
-        <figure>
-            <img src="Maquette/images/restaurants/resto4.jpg" class="contain" >
+        <figure class="ombre2 lastclass">
+            <img src="Maquette/images/restaurants/resto4.jpg" class="contain">
             <figcaption>
                 <h2>Le délice des sens</h2>
-                <p>Folie-Méricourt</p>
+                <p class="selected">Folie-Méricourt</p>
+                <p><i class="far fa-heart iconeheart"></i></p>
             </figcaption>
         </figure>
     </section>
@@ -86,7 +95,7 @@
             </div>
             <div id="contactfooter">
                 <p><i class="fas fa-utensils iconefork"></i>Proposer un restaurant</p>
-                <p>Devenir partenaire</p>
+                <p><i class="fas fa-hands-helping iconehands"></i>Devenir partenaire</p>
                 <p>Mentions légales</p>
                 <p>Contact</p>
             </div>
