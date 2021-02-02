@@ -1,9 +1,16 @@
 /* variables */
 /* Polices */
 @font-face {
-  font-family: 'robotoregular';
+  font-family: "robotoregular";
   src: url("../../webfonts/roboto_regular_macroman/Roboto-Regular-webfont.eot");
   src: url("../../webfonts/roboto_regular_macroman/Roboto-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("../../webfonts/roboto_regular_macroman/Roboto-Regular-webfont.woff2") format("woff2"), url("../../webfonts/roboto_regular_macroman/Roboto-Regular-webfont.woff") format("woff"), url("../../webfonts/roboto_regular_macroman/Roboto-Regular-webfont.ttf") format("truetype"), url("../../webfonts/roboto_regular_macroman/Roboto-Regular-webfont.svg#robotoregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "shrikhand";
+  src: url("../../webfonts/shrikhand_regular/Shrikhand-Regular.otf");
   font-weight: normal;
   font-style: normal;
 }
@@ -11,25 +18,50 @@
 body {
   font-size: 2em;
   font-family: "robotoregular";
+  margin: 0;
 }
 
 header {
-  text-align: center;
-  font-family: sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: "shrikhand";
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: -5%;
+  margin-top: -1%;
+}
+
+header h1 {
+  margin-right: 35%;
+  padding-bottom: 2%;
+}
+
+header p {
+  margin-left: 5%;
+  margin-top: 5%;
 }
 
 .imgtop {
-  height: 100%;
   width: 100%;
 }
 
-h1 {
-  margin-left: 0.8em;
+main {
+  background-color: #F6F6F6;
+  border-radius: 90px 90px 0px 0px;
+  margin-top: -5em;
+  position: relative;
 }
 
-.main {
-  background-color: #F6F6F6;
-  border-radius: 10px 10px 10px 10px;
+main h1 {
+  font-family: "shrikhand";
+  margin-left: 0.8em;
+  padding-top: 1em;
+}
+
+.container {
+  margin-top: 2em;
 }
 
 h2 {
@@ -61,6 +93,7 @@ ol li {
   background-color: white;
   -webkit-box-shadow: 2px 3px 3px 0px #808080b8;
           box-shadow: 2px 3px 3px 0px #808080b8;
+  height: 4.5em;
 }
 
 h3 {
@@ -68,16 +101,24 @@ h3 {
   margin-top: 0.5em;
 }
 
-.txtmenuflex {
-  margin: 0;
-  margin-bottom: 0.5em;
-  margin-top: 0.5em;
+.flexprix {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .prix {
-  position: absolute;
-  top: 34%;
-  right: 10%;
+  margin-right: 2em;
+  margin-top: 0.3em;
+  font-weight: bold;
+}
+
+.txtmenuflex {
+  margin: 0;
+  margin-bottom: 0.5em;
 }
 
 .btndiv {
@@ -113,15 +154,16 @@ footer {
           flex-direction: column;
 }
 
+footer h1 {
+  font-family: "shrikhand";
+  color: white;
+  font-size: 1em;
+}
+
 #txtfooter {
   margin-top: 30px;
   margin-left: 30px;
   margin-bottom: 30px;
-}
-
-#imgfooter {
-  margin-bottom: 2%;
-  fill: white;
 }
 
 #contactfooter {

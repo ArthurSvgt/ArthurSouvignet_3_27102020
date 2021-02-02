@@ -4,11 +4,13 @@
     $gris: #F6F6F6;
     $vert: #99E2D0;
     $roboto: "robotoregular";
+    $shrikhand: "shrikhand";
+    
 
     /* Polices */
 
     @font-face {
-        font-family: 'robotoregular';
+        font-family: $roboto;
         src: url('../../webfonts/roboto_regular_macroman/Roboto-Regular-webfont.eot');
         src: url('../../webfonts/roboto_regular_macroman/Roboto-Regular-webfont.eot?#iefix') format('embedded-opentype'),
              url('../../webfonts/roboto_regular_macroman/Roboto-Regular-webfont.woff2') format('woff2'),
@@ -18,35 +20,66 @@
         font-weight: normal;
         font-style: normal;
     }
-    
 
+    @font-face {
+        font-family: $shrikhand;
+        src: url('../../webfonts/shrikhand_regular/Shrikhand-Regular.otf');
+        font-weight: normal;
+        font-style: normal;
+    
+    }
     body
     {
         font-size: 2em;
         font-family: $roboto;
+        margin: 0;
     }
 
     header
     {
-        text-align: center;
-        font-family: sans-serif;
+        display: flex;
+        font-family: $shrikhand;
+        justify-content: space-between;
+        margin-bottom: -5%;
+        margin-top: -1%;
+        
+        h1 
+        {
+            margin-right: 35%;
+            padding-bottom: 2%;
+        }
+
+        p 
+        {
+            margin-left: 5%;
+            margin-top: 5%;
+        }
     }
 
     .imgtop
     {
-        height: 100%;
+
         width: 100%;
     }
 
-    h1
-    {
-        margin-left: 0.8em;
-    }
-
-    .main
+    main
     {
         background-color: $gris;
-        border-radius: 10px 10px 10px 10px;
+        border-radius: 90px 90px 0px 0px;
+        margin-top: -5em;
+        position: relative;
+
+        h1
+        {
+            font-family: $shrikhand;
+            margin-left: 0.8em;
+            padding-top: 1em;
+        }
+    }
+
+    .container
+    {
+        margin-top: 2em;
     }
 
     h2
@@ -66,35 +99,41 @@
 
     ol li 
     {
-    display: flex;
-    flex-direction: column;
-    margin-right: 5%;
-    margin-left: 0%;
-    border-radius: 30px 30px 30px 30px;
-    margin-bottom: 1em;
-    padding-left: 1em;
-    background-color: white;
-    box-shadow:  2px 3px 3px 0px #808080b8
+        display: flex;
+        flex-direction: column;
+        margin-right: 5%;
+        margin-left: 0%;
+        border-radius: 30px 30px 30px 30px;
+        margin-bottom: 1em;
+        padding-left: 1em;
+        background-color: white;
+        box-shadow:  2px 3px 3px 0px #808080b8;
+        height: 4.5em;
     }
 
     h3
     {
-    margin-bottom: 0;
-    margin-top: 0.5em;
+        margin-bottom: 0;
+        margin-top: 0.5em;
     }
 
-    .txtmenuflex
+    .flexprix
     {
-    margin: 0;
-    margin-bottom: 0.5em;
-    margin-top: 0.5em;
+        display: flex;
+        justify-content: space-between;
     }
 
     .prix
     {
-    position: absolute;
-    top: 34%;
-    right: 10%;
+        margin-right: 2em;
+        margin-top: 0.3em;
+        font-weight: bold;
+    }
+
+    .txtmenuflex
+    {
+        margin: 0;
+        margin-bottom: 0.5em;
     }
 
     .btndiv 
@@ -106,14 +145,14 @@
 
     button
     {
-    background-color: $violet;
-    color: white;
-    border-radius: 55px;
-    padding: 35px;
-    border: none;
-    margin-bottom: 110px;
-    width: 50%;
-    font-size: 1.5rem;  
+        background-color: $violet;
+        color: white;
+        border-radius: 55px;
+        padding: 35px;
+        border: none;
+        margin-bottom: 110px;
+        width: 50%;
+        font-size: 1.5rem;  
     }
 
     .ombre
@@ -127,6 +166,13 @@
         background-color: #353535;
         display: flex;  
         flex-direction: column;
+
+        h1 
+        {
+            font-family: $shrikhand;
+            color: white;
+            font-size: 1em;
+        }
     }
 
     #txtfooter
@@ -134,12 +180,6 @@
         margin-top: 30px;
         margin-left: 30px;
         margin-bottom: 30px;  
-    }
-
-    #imgfooter
-    {
-        margin-bottom: 2%;
-        fill: white;
     }
 
     #contactfooter
