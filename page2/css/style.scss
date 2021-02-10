@@ -40,19 +40,27 @@
         display: flex;
         font-family: $shrikhand;
         justify-content: space-between;
-        margin-bottom: -5%;
         margin-top: -1%;
         
         h1 
         {
-            margin-right: 35%;
-            padding-bottom: 2%;
+            width: 60%;
+            margin-right: 20%;
+            text-align: center;
         }
 
         p 
         {
             margin-left: 5%;
-            margin-top: 5%;
+            margin-top: 2%;
+            width: 15%;
+
+            i
+            {
+                margin-left: 20%;
+                margin-top: 30%;
+                margin-bottom: 0;
+            }
         }
     }
 
@@ -97,8 +105,10 @@
         margin-top: 14px;
     }
 
-    ol li 
+    ol 
     {
+        li {
+
         display: flex;
         flex-direction: column;
         margin-right: 5%;
@@ -109,6 +119,8 @@
         background-color: white;
         box-shadow:  2px 3px 3px 0px #808080b8;
         height: 4.5em;
+    }
+        
     }
 
     h3
@@ -126,7 +138,7 @@
     .prix
     {
         margin-right: 2em;
-        margin-top: 0.3em;
+        margin-top: 0;
         font-weight: bold;
     }
 
@@ -152,7 +164,13 @@
         border: none;
         margin-bottom: 110px;
         width: 50%;
-        font-size: 1.5rem;  
+        font-size: 1.5rem;
+        transform: scale(1);
+        transition: transform 300ms;
+        &:hover
+        {
+            transform: scale(1.2);
+        }
     }
 
     .ombre
@@ -194,6 +212,10 @@
             color: white;
             margin-top: 1px;
             margin-bottom: 7px;
+        }
+
+        a {
+            text-decoration: none;
         }
     }
 
