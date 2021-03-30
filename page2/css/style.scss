@@ -1,232 +1,286 @@
-    
-  /* variables */ 
-    $violet: #B761DB;
-    $gris: #F6F6F6;
-    $vert: #99E2D0;
-    $roboto: "robotoregular";
-    $shrikhand: "shrikhand";
-    
+/* variables */ 
+$violet: #B761DB;
+$gris: #F6F6F6;
+$vert: #99E2D0;
+$roboto: "robotoregular";
+$shrikhand: "shrikhand";
 
-    /* Polices */
 
-    @font-face {
-        font-family: $roboto;
-        src: url('../../webfonts/roboto_regular_macroman/Roboto-Regular-webfont.eot');
-        src: url('../../webfonts/roboto_regular_macroman/Roboto-Regular-webfont.eot?#iefix') format('embedded-opentype'),
-             url('../../webfonts/roboto_regular_macroman/Roboto-Regular-webfont.woff2') format('woff2'),
-             url('../../webfonts/roboto_regular_macroman/Roboto-Regular-webfont.woff') format('woff'),
-             url('../../webfonts/roboto_regular_macroman/Roboto-Regular-webfont.ttf') format('truetype'),
-             url('../../webfonts/roboto_regular_macroman/Roboto-Regular-webfont.svg#robotoregular') format('svg');
-        font-weight: normal;
-        font-style: normal;
+/* Polices */
+
+@font-face {
+    font-family: $roboto;
+    src: url('../../webfonts/roboto_regular_macroman/Roboto-Regular-webfont.eot');
+    src: url('../../webfonts/roboto_regular_macroman/Roboto-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../../webfonts/roboto_regular_macroman/Roboto-Regular-webfont.woff2') format('woff2'),
+         url('../../webfonts/roboto_regular_macroman/Roboto-Regular-webfont.woff') format('woff'),
+         url('../../webfonts/roboto_regular_macroman/Roboto-Regular-webfont.ttf') format('truetype'),
+         url('../../webfonts/roboto_regular_macroman/Roboto-Regular-webfont.svg#robotoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: $shrikhand;
+    src: url('../../webfonts/shrikhand_regular/Shrikhand-Regular.otf');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body
+{
+    font-size: 2em;
+    font-family: $roboto;
+    margin: 0;
+}
+
+header
+{
+    display: flex;
+    font-family: $shrikhand;
+    justify-content: space-between;
+    align-items: center;
+    
+    h1 
+    {
+        width: 60%;
+        margin-right: 20%;
+        text-align: center;
     }
 
-    @font-face {
+    a 
+    {
+        margin-left: 5%;
+        width: 15%;
+    }
+}
+
+.imgtop
+{
+
+    width: 100%;
+}
+
+main
+{
+    background-color: $gris;
+    border-radius: 90px 90px 0px 0px;
+    margin-top: -5em;
+    position: relative;
+
+    h1
+    {
         font-family: $shrikhand;
-        src: url('../../webfonts/shrikhand_regular/Shrikhand-Regular.otf');
-        font-weight: normal;
-        font-style: normal;
-    
+        margin-left: 0.8em;
+        padding-top: 1em;
     }
-    body
+}
+
+.container
+{
+    margin-top: 2em;
+}
+
+h2
+{
+    margin-bottom: 0;
+    margin-left: 1em;
+}
+
+.border
+{
+    background-color: $vert;
+    width: 91px;
+    height: 5px;
+    margin-left: 51px;
+    margin-top: 14px;
+}
+
+ol 
+{
+    li {
+
+    display: flex;
+    margin-right: 5%;
+    margin-left: 0%;
+    border-radius: 30px 30px 30px 30px;
+    margin-bottom: 1em;
+    padding-left: 1em;
+    background-color: white;
+    box-shadow:  2px 3px 3px 0px #808080b8;
+    height: 4.5em;
+
+    .list_desk
     {
-        font-size: 2em;
-        font-family: $roboto;
-        margin: 0;
-    }
-
-    header
-    {
-        display: flex;
-        font-family: $shrikhand;
-        justify-content: space-between;
-        margin-top: -1%;
-        
-        h1 
-        {
-            width: 60%;
-            margin-right: 20%;
-            text-align: center;
-        }
-
-        p 
-        {
-            margin-left: 5%;
-            margin-top: 2%;
-            width: 15%;
-
-            i
-            {
-                margin-left: 20%;
-                margin-top: 30%;
-                margin-bottom: 0;
-            }
-        }
-    }
-
-    .imgtop
-    {
-
         width: 100%;
     }
-
-    main
-    {
-        background-color: $gris;
-        border-radius: 90px 90px 0px 0px;
-        margin-top: -5em;
-        position: relative;
-
-        h1
-        {
-            font-family: $shrikhand;
-            margin-left: 0.8em;
-            padding-top: 1em;
         }
+    
+}
+
+@for $i from 1 to 10 {
+    .fade:nth-child(#{$i}) {
+    
+        animation: displaylist #{$i * 700}ms;
+
+    }
+}
+    
+@keyframes displaylist
+{
+    0% { 
+        opacity: 0;
     }
 
-    .container
+    100% {
+        opacity: 1;
+    }
+}
+
+.animslide
+{
+    width: 0%;
+    background-color: #99E2D0;
+    border-radius: 0px 30px 30px 0px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+li:hover .animslide {
+    animation: slide 700ms;
+    animation-fill-mode: forwards;
+
+}
+
+@keyframes slide {
+    from { width: 0%;}
+    to   { width: 20%;}
+}
+
+.checkmark
+{
+    font-size: 2em;
+    color: white;
+}
+
+li:hover .checkmark
+{
+    animation: check-rotate 700ms linear;
+
+}
+
+@keyframes check-rotate {
+    from { transform: rotate(45deg); }
+    to { transform: rotate(360deg); }
+}
+
+h3
+{
+    margin-bottom: 0;
+    margin-top: 0.5em;
+}
+
+.flexprix
+{
+    display: flex;
+    justify-content: space-between;
+}
+
+.prix
+{
+    margin-right: 2em;
+    margin-top: 0;
+    font-weight: bold;
+}
+
+.txtmenuflex
+{
+    margin: 0;
+    margin-bottom: 0.5em;
+}
+
+.btndiv 
+{
+    text-align: center;
+    margin-top: 2em;
+    margin-bottom: 0em;
+}
+
+button
+{
+    background-color: $violet;
+    color: white;
+    border-radius: 55px;
+    padding: 35px;
+    border: none;
+    margin-bottom: 110px;
+    width: 50%;
+    font-size: 1.5rem;
+    transform: scale(1);
+    transition: transform 300ms;
+    &:hover
     {
-        margin-top: 2em;
+        transform: scale(1.2);
     }
+}
 
-    h2
+.ombre
+{
+    box-shadow:  0px 5px 20px 1px #808080b8;
+
+}
+
+footer
+{
+    background-color: #353535;
+    display: flex;  
+    flex-direction: column;
+
+    h1 
     {
-        margin-bottom: 0;
-        margin-left: 1em;
-    }
-
-    .border
-    {
-        background-color: $vert;
-        width: 91px;
-        height: 5px;
-        margin-left: 51px;
-        margin-top: 14px;
-    }
-
-    ol 
-    {
-        li {
-
-        display: flex;
-        flex-direction: column;
-        margin-right: 5%;
-        margin-left: 0%;
-        border-radius: 30px 30px 30px 30px;
-        margin-bottom: 1em;
-        padding-left: 1em;
-        background-color: white;
-        box-shadow:  2px 3px 3px 0px #808080b8;
-        height: 4.5em;
-    }
-        
-    }
-
-    h3
-    {
-        margin-bottom: 0;
-        margin-top: 0.5em;
-    }
-
-    .flexprix
-    {
-        display: flex;
-        justify-content: space-between;
-    }
-
-    .prix
-    {
-        margin-right: 2em;
-        margin-top: 0;
-        font-weight: bold;
-    }
-
-    .txtmenuflex
-    {
-        margin: 0;
-        margin-bottom: 0.5em;
-    }
-
-    .btndiv 
-    {
-        text-align: center;
-        margin-top: 2em;
-        margin-bottom: 0em;
-    }
-
-    button
-    {
-        background-color: $violet;
+        font-family: $shrikhand;
         color: white;
-        border-radius: 55px;
-        padding: 35px;
-        border: none;
-        margin-bottom: 110px;
-        width: 50%;
-        font-size: 1.5rem;
-        transform: scale(1);
-        transition: transform 300ms;
-        &:hover
-        {
-            transform: scale(1.2);
-        }
+        font-size: 1em;
     }
+}
 
-    .ombre
+#txtfooter
+{
+    margin-top: 30px;
+    margin-left: 30px;
+    margin-bottom: 30px;  
+}
+
+#contactfooter
+{
+    font-size: 25px;
+    font-family: $roboto;
+    display: flex;
+    flex-direction: column;
+
+    p 
     {
-        box-shadow:  0px 5px 20px 1px #808080b8;
-
+        color: white;
+        margin-top: 1px;
+        margin-bottom: 7px;
     }
 
-    footer
-    {
-        background-color: #353535;
-        display: flex;  
-        flex-direction: column;
-
-        h1 
-        {
-            font-family: $shrikhand;
-            color: white;
-            font-size: 1em;
-        }
+    a {
+        text-decoration: none;
     }
+}
 
-    #txtfooter
-    {
-        margin-top: 30px;
-        margin-left: 30px;
-        margin-bottom: 30px;  
-    }
+.iconefork
+{
+    font-size: 90%;
+    margin-right: 25px;
+}
 
-    #contactfooter
-    {
-        font-size: 25px;
-        font-family: $roboto;
-        display: flex;
-        flex-direction: column;
-
-        p 
-        {
-            color: white;
-            margin-top: 1px;
-            margin-bottom: 7px;
-        }
-
-        a {
-            text-decoration: none;
-        }
-    }
-
-    .iconefork
-    {
-        font-size: 90%;
-        margin-right: 25px;
-    }
-
-    .iconehands
-    {
-        font-size: 90%;
-        margin-right: 14px;
-    }
+.iconehands
+{
+    font-size: 90%;
+    margin-right: 14px;
+}
