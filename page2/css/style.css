@@ -266,7 +266,8 @@ h3 {
 }
 
 button {
-  background-color: #B761DB;
+  background: #e985d3;
+  background: linear-gradient(157deg, #e985d3 23%, #e710df 86%);
   color: white;
   border-radius: 55px;
   padding: 35px;
@@ -283,8 +284,8 @@ button {
 }
 
 button:hover {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
+  background: #e985d3;
+  background: linear-gradient(157deg, #e985d3 23%, rgba(231, 16, 223, 0.745536) 86%);
 }
 
 .ombre {

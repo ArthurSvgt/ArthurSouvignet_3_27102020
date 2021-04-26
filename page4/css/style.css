@@ -29,7 +29,9 @@ header {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-top: -1%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 header h1 {
@@ -38,16 +40,9 @@ header h1 {
   text-align: center;
 }
 
-header p {
+header a {
   margin-left: 5%;
-  margin-top: 2%;
   width: 15%;
-}
-
-header p i {
-  margin-left: 20%;
-  margin-top: 30%;
-  margin-bottom: 0;
 }
 
 .imgtop {
@@ -88,10 +83,6 @@ ol li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   margin-right: 5%;
   margin-left: 0%;
   border-radius: 30px 30px 30px 30px;
@@ -103,7 +94,147 @@ ol li {
   height: 4.5em;
 }
 
-ol #backspace {
+ol li .list_desk {
+  width: 100%;
+}
+
+.fade:nth-child(1) {
+  -webkit-animation: displaylist 700ms;
+          animation: displaylist 700ms;
+}
+
+.fade:nth-child(2) {
+  -webkit-animation: displaylist 1400ms;
+          animation: displaylist 1400ms;
+}
+
+.fade:nth-child(3) {
+  -webkit-animation: displaylist 2100ms;
+          animation: displaylist 2100ms;
+}
+
+.fade:nth-child(4) {
+  -webkit-animation: displaylist 2800ms;
+          animation: displaylist 2800ms;
+}
+
+.fade:nth-child(5) {
+  -webkit-animation: displaylist 3500ms;
+          animation: displaylist 3500ms;
+}
+
+.fade:nth-child(6) {
+  -webkit-animation: displaylist 4200ms;
+          animation: displaylist 4200ms;
+}
+
+.fade:nth-child(7) {
+  -webkit-animation: displaylist 4900ms;
+          animation: displaylist 4900ms;
+}
+
+.fade:nth-child(8) {
+  -webkit-animation: displaylist 5600ms;
+          animation: displaylist 5600ms;
+}
+
+.fade:nth-child(9) {
+  -webkit-animation: displaylist 6300ms;
+          animation: displaylist 6300ms;
+}
+
+@-webkit-keyframes displaylist {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes displaylist {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.animslide {
+  width: 0%;
+  background-color: #99E2D0;
+  border-radius: 0px 30px 30px 0px;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+li:hover .animslide {
+  -webkit-animation: slide 700ms;
+          animation: slide 700ms;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes slide {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 20%;
+  }
+}
+
+@keyframes slide {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 20%;
+  }
+}
+
+.checkmark {
+  font-size: 2em;
+  color: white;
+}
+
+li:hover .checkmark {
+  -webkit-animation: check-rotate 700ms linear;
+          animation: check-rotate 700ms linear;
+}
+
+@-webkit-keyframes check-rotate {
+  from {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes check-rotate {
+  from {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+#backspace {
   height: 100%;
 }
 
@@ -139,7 +270,8 @@ h3 {
 }
 
 button {
-  background-color: #B761DB;
+  background: #e985d3;
+  background: linear-gradient(157deg, #e985d3 23%, #e710df 86%);
   color: white;
   border-radius: 55px;
   padding: 35px;
@@ -156,8 +288,8 @@ button {
 }
 
 button:hover {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
+  background: #e985d3;
+  background: linear-gradient(157deg, #e985d3 23%, rgba(231, 16, 223, 0.745536) 86%);
 }
 
 .ombre {

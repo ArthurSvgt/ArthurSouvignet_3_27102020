@@ -39,7 +39,7 @@ header
     display: flex;
     font-family: $shrikhand;
     justify-content: space-between;
-    margin-top: -1%;
+    align-items: center;
     
     h1 
     {
@@ -48,18 +48,10 @@ header
         text-align: center;
     }
 
-    p 
+    a 
     {
         margin-left: 5%;
-        margin-top: 2%;
         width: 15%;
-
-        i
-        {
-            margin-left: 20%;
-            margin-top: 30%;
-            margin-bottom: 0;
-        }
     }
 }
 
@@ -105,26 +97,88 @@ h2
 }
 
 ol 
-{
-    li {
+  {
+      li {
+  
+      display: flex;
+      margin-right: 5%;
+      margin-left: 0%;
+      border-radius: 30px 30px 30px 30px;
+      margin-bottom: 1em;
+      padding-left: 1em;
+      background-color: white;
+      box-shadow:  2px 3px 3px 0px #808080b8;
+      height: 4.5em;
+  
+      .list_desk
+      {
+          width: 100%;
+      }
+          }
+      
+  }
 
+  @for $i from 1 to 10 {
+    .fade:nth-child(#{$i}) {
+    
+        animation: displaylist #{$i * 700}ms;
+
+    }
+}
+    
+@keyframes displaylist
+{
+    0% { 
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.animslide
+{
+    width: 0%;
+    background-color: #99E2D0;
+    border-radius: 0px 30px 30px 0px;
+    overflow: hidden;
     display: flex;
-    flex-direction: column;
-    margin-right: 5%;
-    margin-left: 0%;
-    border-radius: 30px 30px 30px 30px;
-    margin-bottom: 1em;
-    padding-left: 1em;
-    background-color: white;
-    box-shadow:  2px 3px 3px 0px #808080b8;
-    height: 4.5em;
+    justify-content: center;
+    align-items: center;
+}
+
+li:hover .animslide {
+    animation: slide 700ms;
+    animation-fill-mode: forwards;
+
+}
+
+@keyframes slide {
+    from { width: 0%;}
+    to   { width: 20%;}
+}
+
+.checkmark
+{
+    font-size: 2em;
+    color: white;
+}
+
+li:hover .checkmark
+{
+    animation: check-rotate 700ms linear;
+
+}
+
+@keyframes check-rotate {
+    from { transform: rotate(45deg); }
+    to { transform: rotate(360deg); }
 }
    
 #backspace
 {
     height: 100%;
-}
-
 }
 
 h3
@@ -161,7 +215,8 @@ h3
 
 button
 {
-    background-color: $violet;
+    background: rgb(233,133,211);
+    background: linear-gradient(157deg, rgba(233,133,211,1) 23%, rgba(231,16,223,1) 86%);
     color: white;
     border-radius: 55px;
     padding: 35px;
@@ -171,10 +226,10 @@ button
     font-size: 1.5rem;
     transform: scale(1);
     transition: transform 300ms;
-    &:hover
-    {
-        transform: scale(1.2);
-    }
+    &:hover {
+        background: rgb(233,133,211);
+        background: linear-gradient(157deg, rgba(233,133,211,1) 23%, rgba(231,16,223,0.7455357142857143) 86%);
+      }
 }
 
 .ombre
